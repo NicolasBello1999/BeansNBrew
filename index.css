@@ -1,0 +1,31 @@
+/* Add your desired styles here */
+
+#discount-section,
+#description-section,
+#trending-products-section {
+  padding: 20px;
+}
+
+#discount-product,
+#trending-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.product {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.product img {
+  width: 100%;
+}
+
+.product h3 {
+  margin: 10px 0;
+}
+
+.product p {
+  font-weight: bold;
+}
