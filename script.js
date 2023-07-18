@@ -1,28 +1,25 @@
 window.addEventListener('DOMContentLoaded', function() {
-    // Fetch and display the current discount product
-    fetchDiscountProduct();
+  // Fetch and display the current discount product
+  fetchDiscountProduct();
+
+  // Fetch and display the trending products
+  fetchTrendingProducts();
+});
   
-    // Fetch and display the trending products
-    fetchTrendingProducts();
-  });
-  
-  function fetchDiscountProduct() {
+function fetchDiscountProduct() {
     // Simulating a fetch request
-    setTimeout(function() {
-      var discountProduct = {
-        name: "Discount Coffee",
-        image: "coffee_discount.jpg",
-        price: 9.99
-      };
+  var discountProduct = {
+    name: "Discount Coffee",
+    image: "coffee_discount.jpg",
+    price: 9.99
+  };
+
+  var discountProductElement = createProductElement(discountProduct);
+  document.getElementById("discount-product").appendChild(discountProductElement);
+}
   
-      var discountProductElement = createProductElement(discountProduct);
-      document.getElementById("discount-product").appendChild(discountProductElement);
-    }, 1000); // Simulating a delay for demonstration purposes
-  }
-  
-  function fetchTrendingProducts() {
-    // Simulating a fetch request
-    setTimeout(function() {
+function fetchTrendingProducts() {
+      // Simulating a fetch request
       var trendingProducts = [
         {
           name: "Trending Coffee 1",
@@ -47,10 +44,9 @@ window.addEventListener('DOMContentLoaded', function() {
         var productElement = createProductElement(product);
         trendingProductsElement.appendChild(productElement);
       });
-    }, 2000); // Simulating a delay for demonstration purposes
-  }
+}
   
-  function createProductElement(product) {
+function createProductElement(product) {
     var productElement = document.createElement("div");
     productElement.classList.add("product");
   
@@ -68,5 +64,5 @@ window.addEventListener('DOMContentLoaded', function() {
     productElement.appendChild(priceElement);
   
     return productElement;
-  }
+}
   
